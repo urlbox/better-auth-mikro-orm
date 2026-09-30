@@ -2,8 +2,8 @@
   "private": false,
   "type": "module",
   "name": "better-auth-mikro-orm",
-  "version": "1.0.0-next.2",
-  "description": "Mikro ORM Adapter for Better Auth",
+  "version": "1.0.0-next.2-urlbox.1",
+  "description": "Mikro ORM Adapter for Better Auth (urlbox build with Better Auth 1.7 support)",
   "keywords": [
     "auth",
     "better-auth",
@@ -19,7 +19,6 @@
     "type": "git",
     "url": "git+ssh://git@github.com/octet-stream/better-auth-mikro-orm.git"
   },
-  "packageManager": "pnpm@10.33.2+sha512.a90faf6feeab71ad6c6e57f94e0fe1a12f5dcc22cd754db40ae9593eb6a3e0b6b12e3540218bb37ae083404b1f2ce6db2a4121e979829b4aff94b99f49da1cf8",
   "engines": {
     "node": ">= 22"
   },
@@ -34,41 +33,6 @@
   "files": [
     "lib"
   ],
-  "scripts": {
-    "build": "del-cli lib && tsc -p tsconfig.build.json",
-    "test": "vitest run",
-    "test.watch": "vitest",
-    "test.ui": "vitest --ui",
-    "coverage": "vitest run --coverage",
-    "coverage.ui": "vitest --coverage --ui",
-    "release": "pnpm build && changeset publish",
-    "prepare": "npx --yes is-in-ci || husky"
-  },
-  "devDependencies": {
-    "@better-auth/test-utils": "1.7.7",
-    "@biomejs/biome": "2.4.13",
-    "@changesets/changelog-github": "0.6.0",
-    "@changesets/cli": "2.31.0",
-    "@commitlint/cli": "20.5.2",
-    "@commitlint/config-conventional": "20.5.0",
-    "@commitlint/types": "20.5.0",
-    "@faker-js/faker": "10.4.0",
-    "@mikro-orm/core": "7.0.12",
-    "@mikro-orm/decorators": "7.0.12",
-    "@mikro-orm/postgresql": "7.0.12",
-    "@mikro-orm/sqlite": "7.0.12",
-    "@types/node": "25.6.0",
-    "@vitest/coverage-v8": "4.1.5",
-    "@vitest/ui": "4.1.5",
-    "better-auth": "1.7.7",
-    "del-cli": "7.0.0",
-    "es-toolkit": "1.46.0",
-    "husky": "9.1.7",
-    "is-in-ci": "2.0.0",
-    "typescript": "6.0.3",
-    "uuid": "14.0.0",
-    "vitest": "4.1.5"
-  },
   "dependencies": {
     "dset": "3.1.4"
   },

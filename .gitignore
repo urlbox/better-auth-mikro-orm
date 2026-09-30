@@ -4,6 +4,5 @@ node_modules
 
 /.direnv
 /coverage
-/lib
 /vitest-report.*
 /.vite-node
