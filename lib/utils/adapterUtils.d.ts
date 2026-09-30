@@ -1,4 +1,4 @@
-import type { EntityMetadata, EntityProperty, MikroORM } from "@mikro-orm/core";
+import type { EntityManager, EntityMetadata, EntityProperty, MikroORM } from "@mikro-orm/core";
 import type { Where } from "better-auth";
 import type { AdapterFactoryCustomizeAdapterCreator } from "better-auth/adapters";
 type AdapterFactoryCustomizeAdapterCreatorConfig = Parameters<AdapterFactoryCustomizeAdapterCreator>[0];
@@ -42,8 +42,9 @@ export interface AdapterUtils {
      *
      * @param entityName - The name of the entity
      * @param input - The data to normalize
+     * @param em - EntityManager used to create references. Defaults to the current context of `orm.em`
      */
-    normalizeInput(metadata: EntityMetadata, input: Record<string, any>): Record<string, any>;
+    normalizeInput(metadata: EntityMetadata, input: Record<string, any>, em?: EntityManager): Record<string, any>;
     /**
      * Normalizes the Mikro ORM output for Better Auth.
      *
